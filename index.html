@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://hhvwsbmstitdmioueugw.supabase.co; base-uri 'none'; form-action 'none'">
+  <meta property="og:title" content="You're invited to RealOp">
+  <meta property="og:description" content="The right opinion, from the right person, right now.">
+  <title>RealOp invite</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card" aria-live="polite">
+    <p class="logo"><span class="real">Real</span><span class="op">Op</span></p>
+
+    <section id="loading">
+      <p class="muted" data-i18n="loading">Loading your invitation…</p>
+    </section>
+
+    <section id="valid" hidden>
+      <h1 id="title"></h1>
+      <p class="muted" data-i18n="tagline">The right opinion, from the right person, right now.</p>
+
+      <a id="open-app" class="button primary" href="#" data-i18n="openApp">Open in RealOp</a>
+      <p class="hint" data-i18n="openHint">Already have RealOp? Tap above.</p>
+
+      <div class="steps">
+        <h2 data-i18n="newTitle">New to RealOp? 3 quick steps</h2>
+        <ol>
+          <li>
+            <strong data-i18n="step1">Install RealOp</strong>
+            <span class="muted" id="install-note" data-i18n="step1Beta">RealOp is in private testing: ask the person who invited you how to join.</span>
+          </li>
+          <li>
+            <strong data-i18n="step2">Sign up with your email</strong>
+            <span class="muted" data-i18n="step2Note">It takes under a minute: no password needed.</span>
+          </li>
+          <li>
+            <strong data-i18n="step3">Tap “Paste invite” in the app</strong>
+            <span class="muted" data-i18n="step3Note">Copy your invite first:</span>
+          </li>
+        </ol>
+        <div class="code-row">
+          <code id="code"></code>
+          <button id="copy" class="button secondary" type="button" data-i18n="copy">Copy invite</button>
+        </div>
+        <p id="copied" class="success" hidden data-i18n="copied">Copied! Now open RealOp and tap “Paste invite”.</p>
+      </div>
+      <p class="hint" id="expires"></p>
+    </section>
+
+    <section id="problem" hidden>
+      <h1 id="problem-title"></h1>
+      <p class="muted" id="problem-body"></p>
+    </section>
+
+    <footer class="muted small" data-i18n="privacy">This page does not use cookies or trackers.</footer>
+  </main>
+  <script src="invite.js"></script>
+</body>
+</html>
